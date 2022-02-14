@@ -1,0 +1,8 @@
+<h1>cookies are generated and stored in browser</h1>
+
+{{request.COOKIES.data}}
+{%if request.COOKIES.visits %}
+no of visits:-{{request.COOKIES.visits}}
+{% else %}
+no of visits:- 0 
+{% endif %}

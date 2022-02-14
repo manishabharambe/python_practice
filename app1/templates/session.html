@@ -1,0 +1,13 @@
+<!doctype>
+<html>
+    
+    {{request.session}}  
+    {% comment %} Output <django.contrib.sessions.backends.db.SessionStore object at 0x000001D0A56658B0> {% endcomment %}
+<br>
+    {{request.session.items}}       
+    {% comment %} output--dict_items([('name', 'username'), ('password', 'password123'), ('age', 25), ('city', 'kalyan')]) {% endcomment %}
+
+    {%for i in request.session.items%}
+    {{i.0}} -- {{i.1}} --- {{i.2}} <br>
+    {%endfor%}
+ </html>
